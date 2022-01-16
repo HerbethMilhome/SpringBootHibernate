@@ -34,6 +34,10 @@ public class OrderItem implements Serializable {
 		this.preco = preco;
 	}
 	
+	public Double getSubTotal() {
+		return preco * quantidade;
+	}
+	
 	@JsonIgnore
 	public Order getOrder() {
 		return id.getOrder();
